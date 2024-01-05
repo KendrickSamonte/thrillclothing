@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="3rd-prod.css">
+</head>
+
+
+<body>
+    <header>
+        <div class="header">
+            <nav>
+                <ul>
+                    <li><a href="#latest">New Release</a></li>
+                    <li><a href="/shop.html">Products</a></li>
+                </ul>
+                <a href="index.html"><h1>THRILL</h1></a>
+                <ul class="About">
+                    <li><a href="/about.html">About us</a></li>
+                </ul>
+                <ion-icon onclick="toggleCart()" class="icon" name="bag-outline"></ion-icon>
+
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="product">
+            <img src="/medias/12.png" alt="product-image">
+            
+            
+            <form id="add-to-cart-form" class="add-to-cart">
+                <h1> SECRET SAUCE</h1>
+            <p id="price">₱600</p>
+            <label for="size" class="size"> Size:
+                <select id="size">
+                    <option value="extra-small">Extra Small</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="extra-large">Extra Large</option>
+                </select>
+            </label>
+    
+            <label for="quantity" class="quantity"> Quantity:
+            <input type="number" id="quantity" name="quantity" value="1" min="1">
+            </label>
+    
+            <button type="button" onclick="addToCartTwelve()">Add to Cart</button>
+    
+            <a class="back" href="/11th-prod.html"> Back</a>
+            <a class="next" href="/shop.html"> Products</a>
+            </form>
+    
+        </div>  
+    </main>
+    
+        <div class="cart">
+            <h1>Shopping Cart</h1>
+            <ul id="cart-items"></ul>
+            <div class="btn">
+                <button class="close-cart" onclick="closeCart()">CLOSE</button>
+                <button class="checkout" onclick="openCheckout()">CHECKOUT</button>
+            </div>
+        </div>
+
+        <div class="checkout-modal" id="checkoutModal">
+            <div class="modal-content">
+              <span class="close" onclick="closeCheckout()">&times;</span>
+              <h2>Checkout</h2>
+              <ul id="checkout-items"></ul>
+              <p class="totalAmount">Total: ₱<span id="totalPrice">0.00</span></p>
+              <form id="shippingForm">
+                <label class="name-input" for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="contactNumber" class="contact">Contact Number:</label>
+                <input type="tel" id="contactNumber" name="contactNumber" required>
+                <br>
+                <label for="email" class="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label class="address" for="address">Address:</label>
+                <textarea id="address" name="address" required></textarea>
+                <br>
+                <label for="paymentMethod" class="paymentMethod">Payment Method:</label>
+                <select id="paymentMethod" name="paymentMethod" required>
+                <option value="gcash">Gcash</option>
+                <option value="paypal">PayPal</option>
+                <option value="paymaya">Paymaya</option>
+                </select>
+                <br>
+                <button class="order-btn" type="button" onclick="processCheckout()">Place Order</button>
+              </form>
+            </div>
+          </div>
+
+
+
+
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</body>
+</html>

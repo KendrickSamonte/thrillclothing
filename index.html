@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+
+</head>
+
+
+<body>
+    
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="modal-content">
+          <span class="close" onclick="closeCheckout()">&times;</span>
+          <h2>Checkout</h2>
+          <ul id="checkout-items"></ul>
+          <p class="totalAmount">Total: ₱<span id="totalPrice">0.00</span></p>
+          <form id="shippingForm">
+            <label class="name-input" for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="contactNumber" class="contact">Contact Number:</label>
+            <input type="tel" id="contactNumber" name="contactNumber" required>
+            <br>
+            <label for="email" class="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label class="address" for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+            <br>
+            <label for="paymentMethod" class="paymentMethod">Payment Method:</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+            <option value="gcash">Gcash</option>
+            <option value="paypal">PayPal</option>
+            <option value="paymaya">Paymaya</option>
+            </select>
+            <br>
+            <button class="order-btn-two" type="button" onclick="processCheckout()">Place Order</button>
+          </form>
+        </div>
+      </div>
+    <header>
+        <div class="header">
+            <nav>
+                <ul>
+                    <li><a href="#latest">New Release</a></li>
+                    <li><a href="/shop.html">Products</a></li>
+                </ul>
+                <a href="index.html"><h1>THRILL</h1></a>
+                <ul class="About">
+                    <li><a href="">About us</a></li>
+                </ul>
+                <ion-icon onclick="toggleCart()" class="icon" name="bag-outline"></ion-icon>
+
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="first">
+            <video autoplay loop src="/medias/shop.mp4"></video>
+    </main>
+    <section>
+        <div class="title">
+            <h1>THRILL CLOTHING</h1>
+            <p>'Being excited is the Secret Sauce'</p>
+            <a href="/shop.html"><button class="title-btn">Shop Now</button></a> 
+        </div>
+
+        <div class="latest" id="latest">
+            <h1>New Release</h1>
+            <a href="/shop.html"><img src="/medias/secret sauce - 1.jpg"></a>
+        </div>
+
+        <div class="secret">
+            <h1>'secret sauce'</h1>
+        </div>
+
+        <div class="wrap">
+            <div>
+                <img src="/medias/secret sauce -2.jpg">
+                <img src="/medias/secret sauce- 3.jpg">
+                <img src="/medias/secret sauce 4.jpg">
+                <img src="/medias/secret sauce 5.jpg">
+                <img src="/medias/secret-sauce.jpg">
+            </div>
+        </div>
+
+        <div class="undefeated">
+            <h1>UNDEFEATED</h1>
+            <p>'Life is tough but we remain Undefeated'</p>
+            <a href="/shop.html"><button class="undefeated-btn">Shop Now</button></a> 
+        </div>
+
+        <div class="thrill">
+            <h1>undefeated</h1>
+            <img src="/medias/undefeated 1.jpg">
+            <img src="/medias/undefeated 2.jpg">
+            <a href="/shop.html"><button class="shop-btn">Shop</button></a>
+            <a href="/shop.html"><button class="shop-btn-2">Shop</button></a>
+        </div>
+
+        <div class="cart">
+            <h1>Shopping Cart</h1>
+            <ul id="cart-items"></ul>
+            <div class="btn">
+                <button class="close-cart" onclick="closeCart()">CLOSE</button>
+                <button class="checkout" onclick="openCheckout()">CHECKOUT</button>
+            </div>
+        </div>
+        
+        <footer>
+            <h1>THRILL</h1>
+            <p>TM</p>
+            <a href="https://web.facebook.com/ThrillApprl"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://www.instagram.com/thrillapprl/"><ion-icon name="logo-instagram"></ion-icon></a>
+        </footer>
+        
+
+    </section>
+
+    
+
+    <script>
+        var tl = gsap.timeline({
+            paused: "true"
+        });
+        tl.to(".menu",{
+            duration: 1,
+            x: "0%",
+            ease: Expo.easeInOut
+        });
+        tl.fromTo(".li",{
+            y:"-100%",
+            opacity: 0
+        },{
+            duration: .5,
+            opacity: 1,
+            y: "0%",
+            stagger: 0.25
+        });
+        tl.fromTo(".social-li",{
+            y:"-50%",
+            opacity: 0
+        },{
+            duration:0.8,
+            opacity: 1,
+            stagger: 0.25,
+            ease: Expo.easeOut
+        },
+        "-=0.5");
+        
+        function toggle(){
+            tl.play();
+        }
+        function togglec(){
+            tl.reverse();
+        }
+
+    </script>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</body>
+</html>

@@ -1,0 +1,744 @@
+@import url(https://db.onlinewebfonts.com/c/ba2b8f7a1a1b02d9bac815a0040395aa?family=RoslindaleDisplayCondensed+Bold);
+@font-face {
+    font-family: myFont;
+    src: url(italiana.zip);
+}
+
+:root {
+    --color:#f5f5f5;
+    --size: 30px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 700vh;
+    width: 100%;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+    background: #000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    width: 100vw;
+    display: flex;
+    margin: 0 auto;
+    padding: 0 3vw;
+    left: 0;
+    top: 0; 
+    text-align: center;
+    height: 5vw;
+    z-index: 9999;
+    background: #000;
+    
+}
+
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    display: flex;
+    align-content: center;
+    width: 100vw;
+    text-align: center;
+    height: 5vw;
+}
+
+header nav ul li{
+    display: inline-block;
+    position: relative;
+    padding: 1vw;
+    left: 0;
+    top: 1vw;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f5f5f5;
+   
+}
+
+nav ul li a:hover {
+    font-size: 2vw;
+    transition: 0.5s;
+}
+
+nav h1{
+    color: #f5f5f5;
+    font-size: 4vw;
+    text-align: center;
+    letter-spacing: 2vw;
+    margin-top: .5vw;
+    margin-left: 3.5vw;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.About {
+    position: relative;
+    left: 6vw;
+}
+
+.icon {
+    width: 4vw;
+    height: 2.4vw;
+    right: 7.5vw;
+    position: relative;
+    top: 1.3vw;
+    color: white;
+    cursor: pointer;
+
+}
+
+.icon:hover {
+    width: 5vw;
+    height: 2.2vw;
+    transition: 0.5s;
+}
+
+
+main {
+    text-align: center; 
+    left: 0;
+}
+main video {
+    width: 97vw;
+    border-radius: 14px;
+    filter: grayscale(100%);
+    margin-top: 1vw;
+    position: relative;
+}
+
+
+.title{
+    text-align: center;
+    margin-top: 10rem;
+    line-height: 4.5vw;
+}
+
+.title h1{
+    color: #f5f5f5;
+    font-size: 6.5vw;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+}
+
+.title p{
+    color: #f5f5f5;
+    font-size: 1.6vw;
+}
+.title button {
+    border: transparent;
+    border-radius: 1.8vw;
+    font-size: 1.4vw;
+    padding: 0.8vw 1.2vw;
+    cursor: pointer;
+}
+
+.title button:hover {
+    opacity: 0.8;
+}
+
+
+.latest {
+    margin: 0 auto;
+    padding: 2vw;
+    margin-top: 5vw;
+}
+
+.latest h1 {
+    color: #f5f5f5;
+    font-size: 2.3vw;  
+}
+
+.latest img {
+    width: 96vw;
+    height: 50vw;
+    margin-top: 2vw;
+}
+
+
+.secret {
+    color: #f5f5f5;
+    font-size: 1.7vw;
+    text-align: center;
+    margin-top: 9vw;
+    text-transform: uppercase;
+}
+
+.wrap {
+    margin-top: 5vw;
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+}
+
+.wrap div {
+    width: 140vw;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-column-gap: 1vw;
+    flex: none;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 0 auto;
+    padding: 2vw;
+}
+
+.wrap div img {
+    width: 26vw;
+    transition: transform 0.5s;
+    filter: grayscale(50%);
+    border-radius: 5px;
+}
+
+.wrap div img:hover {
+    transform: scale(1.1);
+}
+
+.wrap::-webkit-scrollbar {
+    display: none;
+}
+
+.thrill {
+    margin: 5vw auto;
+    padding: 1.7vw;
+}
+
+.thrill h1 {
+    color: #f5f5f5;
+    text-transform: capitalize;
+    font-size: 2.3vw;
+    margin-left: 1vw;
+}
+
+.thrill img {
+    margin-top: 2vw;
+    width: 49%;
+    padding: 0 1vw;
+    filter: grayscale(50%);
+}
+
+.shop-btn{
+    border: transparent;
+    border-radius: 2vw;
+    font-size: 1.4vw;
+    padding: 1.2vw 2.4vw;
+    cursor: pointer;
+    position: absolute;
+    left: 22vw;
+    margin-top:  55vw;
+    background: #000;
+    color: #f5f5f5;
+}
+
+.shop-btn-2{
+    border: transparent;
+    border-radius: 2vw;
+    font-size: 1.4vw;
+    padding: 1.2vw 2.4vw;
+    cursor: pointer;
+    position: absolute;
+    right: 22vw;
+    margin-top:  55vw;
+    background: #f5f5f5;
+    color: #000;
+}
+
+.shop-btn:hover{
+    opacity: 0.9;
+}
+
+.shop-btn-2:hover {
+    opacity: 0.9;
+}
+
+.undefeated {
+    text-align: center;
+    color: #f5f5f5;
+    margin-top: 7vw;
+    line-height: 4.8vw;
+}
+
+.undefeated h1 {
+    font-size: 6.5vw;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+}
+
+.undefeated p{
+    font-size: 1.4vw;
+}
+
+.undefeated button {
+    border: transparent;
+    border-radius: 1.7vw;
+    font-size: 1.3vw;
+    padding: .9vw 1.2vw;
+    cursor: pointer;   
+}
+
+.undefeated button:hover {
+    opacity: 0.9;
+}
+
+footer {
+    margin-top: 21vw;
+    text-align: center;
+    color: #f5f5f5;
+}
+
+footer h1{
+    font-family: myFont;
+    font-size: 20vw;
+    font-weight: 900;
+    letter-spacing: 20px;
+}
+
+footer p{
+    position: relative;
+    bottom: 20.5vw;
+    left: 37.5vw;
+    font-weight: 600;
+    letter-spacing: .2vw;
+    
+}
+
+footer ion-icon {
+    position: relative;
+    width: 3vw;
+    height: 2.5vw;
+    bottom: 3.2vw;
+    color: white;
+}
+
+
+
+.cart {
+    width: 400px;
+    background: #f5f5f5;
+    color: #000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    inset: 0 0 0 auto;
+    z-index: 9999;
+    display: grid;
+    grid-template-rows: 70px 1fr 50px;
+    display: none;
+}
+
+.cart h1 {
+    margin: 0;
+    padding: 20px;
+    font-weight: 600;
+    color: #000;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.cart ul {
+    font-size: 15px;
+    padding: 0 1rem;
+    display: block;
+    overflow-y: scroll;
+}
+.cart .btn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    cursor: pointer;
+}
+
+li {
+    display: flex;
+    padding: .5rem;
+}
+
+li p{
+    padding-left: 2vw;
+    padding-top: 3vw;
+    font-size: 1vw;
+}
+
+li span {
+    color: #353432;
+}
+
+li button {
+    padding: 0 1vw;
+    height: 30px;
+    margin-top: 3.8vw;
+    margin-left: 3.5vw;
+    cursor: pointer;
+}
+
+.cart .btn button {
+    background-color: #e8bc0e;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+.cart button:hover {
+    opacity: 0.8;
+}
+
+.cart .btn .checkout {
+    background: #000;
+    color: #f5f5f5;
+}
+
+.checkout-modal {
+    z-index: 99999;
+    background: #f5f5f5;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    text-align: center;
+    overflow: scroll;
+    display: none;
+}
+
+.checkPage {
+    margin-left: 7.8vw;
+    margin-top: 2vw;
+    display: flex;
+}
+
+li .checkout-img {
+    width: 9vw;
+}
+
+li .checkout-p {
+    font-size: 1.5vw;
+    text-align: start;
+}
+
+li .checkout-p span {
+    color: #353432;
+    font-weight: 600;
+}
+.order-btn-two {
+    position: relative;
+    top: 0;
+    left: 1vw;
+    margin-top: 1vw;
+    padding: 1vw 6vw;
+    border-radius: 3vw;
+    border: transparent;
+    color: #f5f5f5;
+    background: #000;
+}
+
+
+.modal-content ul{
+    position: relative;
+    left: 28vw;
+    width: 50vw;
+}
+
+.modal-content .close {
+    font-size: 3vw;
+    position: fixed;
+    right: 3vw;
+    top: 0;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    text-transform: uppercase;
+    font-size: 4vw;
+    margin-top: 2vw;
+    font-weight: 800;
+}
+
+.totalAmount {
+    color: #353432;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 5vw;
+    margin-bottom: 2vw;
+}
+
+form {
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width:1000px){
+    body {
+        height: 300vh;
+    }
+
+    header nav {
+        position: fixed;
+    }
+
+    nav h1{
+        margin-left: .2vw;
+    }
+
+    .icon {
+        position: relative;
+        right: 6vw;
+        top: 1.7vw;
+    }
+
+    .undefeated {
+        margin-top: 5rem;
+    }
+
+    footer p{
+        margin-left: 6vw;
+    }
+
+
+    .title {
+        margin-top: 5rem;
+    }
+    
+    .cart {
+        width: 33vw;
+        background: #353432;
+        color: #eee;
+        position: fixed;
+        top: 0;
+        margin-right: 37vw;
+        bottom: 0;
+        inset: 0 0 0 auto;
+        z-index: 9999;
+        display: grid;
+        grid-template-rows: 5vw 1fr 4vw;
+        display: none;
+    }
+
+    .checkout-modal {
+        display: none;
+    }
+
+    .modal-content .close {
+        margin-right: 37vw;
+        margin-top: 1vw;
+    }
+
+}
+
+@media screen and (min-width: 370px) and (max-width:767px){
+    body {
+        height: 250vh;
+    }
+
+    header nav {
+        position: fixed;
+    }
+
+    nav h1{
+        margin-left: .2vw;
+        font-size: 3vw;
+        margin-top: 1vw;
+    }
+
+    nav ul li {
+        font-size: 2vw;
+    }
+
+    nav ul {
+        margin-top: -.5vw;
+    }
+
+    .icon {
+        position: relative;
+        right: 6vw;
+        top: 1.7vw;
+        z-index: 999;
+    }
+
+    .undefeated {
+        margin-top: 5rem;
+    }
+
+    footer p{
+        margin-left: 6vw;
+    }
+
+
+    .title {
+        margin-top: 5vw;
+    }
+
+    footer h1 {
+        font-size: 20vw;
+        letter-spacing: 1vw;
+    }
+
+    footer p {
+        font-size: 3vw;
+    }
+
+    .cart {
+        width: 35vw;
+        background: #353432;
+        color: #eee;
+        position: fixed;
+        top: 0;
+        margin-right: 38vw;
+        bottom: 0;
+        inset: 0 0 0 auto;
+        z-index: 9999;
+        display: grid;
+        grid-template-rows: 5vw 1fr 4vw;
+        display: none;
+    }
+
+    .checkout-modal {
+        display: none;
+    }
+
+    .modal-content .close {
+        margin-right: 37vw;
+        margin-top: 1vw;
+    }
+
+}
+@media screen and (min-width: 51px) and (max-width:370px){
+    body {
+        height: 100vh;
+    }
+
+    header nav {
+        position: fixed;
+    }
+
+    nav h1{
+        margin-left: .2vw;
+        font-size: 3vw;
+        margin-top: 1vw;
+    }
+
+    nav ul li {
+        font-size: 2vw;
+    }
+
+    nav ul {
+        margin-top: -.5vw;
+    }
+
+    .icon {
+        position: relative;
+        right: 6vw;
+        top: 1.7vw;
+    }
+
+    .undefeated {
+        margin-top: 5rem;
+    }
+
+    footer p{
+        margin-left: 6vw;
+    }
+
+
+    .title {
+        margin-top: 5vw;
+    }
+
+    footer h1 {
+        font-size: 20vw;
+        letter-spacing: 1vw;
+    }
+
+    footer p {
+        font-size: 3vw;
+    }
+
+    .cart {
+        width: 60vw;
+        background: #353432;
+        color: #eee;
+        position: fixed;
+        top: 0;
+        margin-right: 38vw;
+        bottom: 0;
+        inset: 0 0 0 auto;
+        z-index: 9999;
+        display: grid;
+        grid-template-rows: 5vw 1fr 4vw;
+        display: none;
+    }
+
+    .cart button {
+        font-size: 2vw;
+    }
+    .checkout-modal {
+        display: none;
+    }
+
+    .modal-content .close {
+        margin-right: 37vw;
+        margin-top: 1vw;
+    }
+
+    li p{
+        padding-left: 4vw;
+        padding-top: 8vw;
+        font-size: 2vw;
+    }
+
+    li img {
+        width: 20vw;
+    }
+    
+    
+    li button {
+        padding: 1vw 1vw;
+        height: 4.5vw;
+        margin-top: 10vw;
+        margin-left: 3.5vw;
+        cursor: pointer;
+        font-size: 2vw;
+    }
+}
+
+ 

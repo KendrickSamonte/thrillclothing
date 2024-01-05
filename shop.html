@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="shop.css">
+</head>
+
+
+<body>
+    <header>
+        <div class="header">
+            <nav>
+                <ul>
+                    <li><a href="">New Release</a></li>
+                    <li><a href="">Products</a></li>
+                </ul>
+                <a href="/index.html"><h1>THRILL</h1></a>
+                <ul class="About">
+                    <li><a href="">About us</a></li>
+                </ul>
+                <ion-icon onclick="toggleCart()" class="icon" name="bag-outline"></ion-icon>
+
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="first">
+            <video autoplay loop src="/medias/main vid.mp4"></video>
+        </div>
+    </main>
+
+    <section  >
+        <h1>OUR PRODUCTS</h1>
+        <div class="first-row">
+
+            <div class="first-product">
+                <a href="/1st-prod.html"><img src="/medias/1.png"></a>
+                <p>RAINBOW</p>
+                <a href="/1st-prod.html"><button>Quick View</button></a>
+            </div>
+
+            <div class="second-product">
+                <a href="/2nd-prod.html"><img src="/medias/2.png"></a>
+                <p>RAINBOW</p>
+                <a href="/2nd-prod.html"><button>Quick View</button></a>
+            </div>
+
+            <div class="third-product">
+                <a href="/3rd-prod.html"><img src="/medias/3.png"></a>
+                <p>RAINBOW</p>
+                <a href="/3rd-prod.html"><button>Quick View</button></a>
+            </div>
+        </div>
+
+
+        <div class="second-row">
+            <div class="fourth-product">
+                <a href="/4th-prod.html"><img src="/medias/4.png"></a>
+                <p>RAINBOW</p>
+                <a href="/4th-prod.html"><button>Quick View</button>
+            </div>
+            <div class="fifth-product">
+                <a href="/5th-prod.html"><img src="/medias/5.png"></a>
+                <p>RAINBOW</p>
+                <a href="/5th-prod.html"><button>Quick View</button></a>
+            </div>
+            <div class="sixth-product">
+                <a href="/6th-prod.html"><img src="/medias/6.png"></a>
+                <p>RAINBOW</p>
+                <a href="/6th-prod.html"><button>Quick View</button></a>
+            </div>
+        </div>
+
+
+        <div class="third-row">
+            <div class="seventh-product">
+                <a href="/7th-prod.html"><img src="/medias/7.png"></a>
+                <p>RAINBOW</p>
+                <a href="/7th-prod.html"><button>Quick View</button>
+            </div>
+            <div class="eight-product">
+                <a href="/8th-prod.html"><img src="/medias/8.png"></a>
+                <p>RAINBOW</p>
+                <a href="/8th-prod.html"><button>Quick View</button></a>
+            </div>
+            <div class="ninth-product">
+                <a href="/9th-prod.html"><img src="/medias/9.png"></a>
+                <p>RAINBOW</p>
+                <a href="/9th-prod.html"><button>Quick View</button></a>
+            </div>
+        </div>
+        <div class="fourth-row">
+            <div class="tenth-product">
+                <a href="/10th-prod.html"><img src="/medias/10.png"></a>
+                <p>RAINBOW</p>
+                <a href="/10th-prod.html"><button>Quick View</button>
+            </div>
+            <div class="eleventh-product">
+                <a href="/11th-prod.html"><img src="/medias/11.png"></a>
+                <p>RAINBOW</p>
+                <a href="/11th-prod.html"><button>Quick View</button></a>
+            </div>
+            <div class="twelfth-product">
+                <a href="/12-prod.html"><img src="/medias/12.png"></a>
+                <p>RAINBOW</p>
+                <a href="/12-prod.html"><button>Quick View</button></a>
+            </div>
+        </div>
+
+        
+    <div class="cart">
+        <h1>Shopping Cart</h1>
+        <ul id="cart-items"></ul>
+        <div class="btn">
+            <button class="close-cart" onclick="closeCart()">CLOSE</button>
+            <button class="checkout" onclick="openCheckout()">CHECKOUT</button>
+        </div>
+    </div>
+    
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="modal-content">
+          <span class="close" onclick="closeCheckout()">&times;</span>
+          <h2>Checkout</h2>
+          <ul id="checkout-items"></ul>
+          <p class="totalAmount">Total: ₱<span id="totalPrice">0.00</span></p>
+          <form id="shippingForm">
+            <label class="name-input" for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="contactNumber" class="contact">Contact Number:</label>
+            <input type="tel" id="contactNumber" name="contactNumber" required>
+            <br>
+            <label for="email" class="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label class="address" for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+            <br>
+            <label for="paymentMethod" class="paymentMethod">Payment Method:</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+            <option value="gcash">Gcash</option>
+            <option value="paypal">PayPal</option>
+            <option value="paymaya">Paymaya</option>
+            </select>
+            <br>
+            <button class="order-btn-two" type="button" onclick="processCheckout()">Place Order</button>
+          </form>
+        </div>
+      </div>
+
+
+        <footer>
+            <h1>THRILL</h1>
+            <p>TM</p>
+            <a href="https://web.facebook.com/ThrillApprl"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://www.instagram.com/thrillapprl/"><ion-icon name="logo-instagram"></ion-icon></a>
+        </footer>
+        
+    </section>
+
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+</body>
+</html>
